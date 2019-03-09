@@ -1,0 +1,277 @@
+              %*****************************************%
+              %                                         %
+              %       Modello di curriculum vitae       %
+              %          di Lorenzo Pantieri ©          %
+              %                                         %
+              %       versione: 26 settembre 2012       %
+              %                                         %
+              %*****************************************%
+
+
+% I seguenti commenti speciali impostano:
+% 1. utf8 come codifica di input,
+% 2. PDFLaTeX come motore di composizione;
+% 3. il controllo ortografico italiano per l'editor.
+
+% !TEX encoding = UTF-8 Unicode
+% !TEX TS-program = pdflatex
+% !TEX spellcheck = it-IT
+
+\documentclass[11pt,%                        % corpo del font: ci sono anche '10pt' e '12pt'
+               a4paper,%                     % carta A4
+               sans,%                        % famiglia di font: c'è anche 'roman'
+               ]{moderncv}                   % buona classe per CV
+
+\usepackage[T1]{fontenc}                     % codifica dei font:
+                                             % richiede una distribuzione completa di LaTeX,
+
+\usepackage[utf8]{inputenc}                  % codifica di input:
+                                             % va accordata con le preferenze dell'editor
+
+\usepackage[italian]{babel}                  % per scrivere in italiano
+
+\usepackage{microtype}                       % microtipografia
+
+% \usepackage{lipsum}                          % genera testo fittizio
+
+\moderncvstyle{casual}                      % tema di moderncv:
+                                             % oltre a 'classic', ci sono 'casual' (predefinito), 'oldstyle' e 'banking'
+
+\moderncvcolor{orange}                         % colori di moderncv:
+                                             % oltre a 'blue' (predefinito), ci sono 'orange', 'green', 'red', 'purple',
+                                             % 'grey' e 'black'
+
+%\nopagenumbers{}                            % decommenta per disabilitare la numerazione automatica delle pagine
+                                             % per CV più lunghi di una pagina
+
+\usepackage[scale=0.75]{geometry}            % imposta i margini
+
+\setlength{\hintscolumnwidth}{3cm}          % regola la larghezza della colonna con le date
+
+%\setlength{\makecvtitlenamewidth}{10cm}     % nello stile 'classic', regola la larghezza riservata al nome;
+                                             % tale lunghezza va modificata con cautela per evitare
+                                             % sovrapposizioni con i dati personali
+
+\firstname{Adriano}                          % nome
+
+\familyname{Fantini}                        % cognome
+
+\title{Curriculum vitae}                     % titolo del CV (opzionale: rimuovi la riga se non lo desideri)
+
+\address{via San Cilino~113, Trieste}{CAP~34128}     % indirizzo (opzionale)
+
+\mobile{+39~347~9540982}                     % cellulare (opzionale)
+
+% \phone{+39~0547~123456}                      % telefono fisso (opzionale)
+
+%\fax{+39~0547~123456}                       % fax (opzionale)
+
+\email{adr.fantini@gmail.com ; afantini@ictp.it} % indirizzo e-mail
+
+\extrainfo{ORCID: https://orcid.org/0000-0002-8090-213X}
+
+% \homepage{www.lorenzopantieri.net}           % sito Web (opzionale)
+
+%\extrainfo{Informazioni extra}              % informazioni extra (opzionale)
+
+\photo[64pt][0.4pt]{AF}                      % inserisce una fotografia (opzionale);
+                                             % '64pt' è l'altezza della foto;
+                                             % '0.4pt' è lo spessore della cornice (si metta '0' per non averla);
+                                             % 'LP' è il nome dell'immagine
+
+%\quote{La citazione è un utile sostituto
+%       dell'arguzia. \\  --- Oscar Wilde}    % una citazione (opzionale)
+
+
+
+\begin{document}
+
+\makecvtitle
+
+
+
+\section{Dati anagrafici}
+
+% TODO :
+% * separa software e linguaggi di programmazione.
+% * aggiungi un po' di cose personali, vedi l'altro CV, quello del PhD
+% * aggiungi lavoro con Srdan?
+% * aggiungi i temi di cui ti piace di più occuparti (mappe, analisi spaziali)
+% * considera di togliere click-edit, ncedit, chymview...
+% * considera di aggiungere l'istruzione superiore, vedi altro CV
+% * metti tutto su un sito
+% * metti un link alla tesi finale, sia di PhD che magistrale
+% * aggiungere link a stars
+% * corsi seguiti durante triennale, magistrale e dottorato
+% * famiglia?
+% * fai versione inglese
+% * controlla spelling
+
+
+\cvdoubleitem{Nascita}{Belluno, 6 novembre 1990}{Nazionalità}{Italiana}
+\cvdoubleitem{Residenza}{Trieste, via San Cilino~113}{Stato civile}{Libero}
+
+\section{Titoli di studio}
+\cventry{Marzo 2019} {Dottorato di ricerca in scienze della terra e meccanica dei fluidi}{}{Abdus Salam International Centre for Theoretical Physics (ICTP), sezione Earth System Physics e Dipartimento di Matematica e Geoscienze, Università di Trieste}{Trieste}{Titolo: Climate change impact on flood hazard over Italy \\ Relatrice: Prof. Erika Coppola (Abdus Salam International Centre for Theoretical Physics, Trieste)
+}
+\cventry{Marzo 2015}{Laurea Magistrale in Fisica}{}{Università degli Studi di Trieste}{percorso in Fisica Terrestre e dell'Ambiente}{Titolo tesi: Evaluation of the impact of the high resolution for the Alpine
+region in a present-day and future scenario simulation with the
+regional climate model RegCM4 \\ Relatrice: Prof. Erika Coppola (Abdus Salam International Centre for Theoretical Physics, Trieste). \\ Votazione~110/110 con lode.}
+\cventry{Novembre 2012}{Laurea Triennale in Fisica}{}{Università degli Studi di Trieste}{}{Titolo tesi: Utilizzo del microcontrollore Arduino
+per la realizzazione di misure nei laboratori didattici dei corsi
+di Fisica \\ Relatore: Prof. Edoardo Milotti (Dipartimento di Fisica, Università di Trieste). \\ Votazione~106/110.}
+\cventry{2009}{Maturità scientifica}{}{Liceo Scientifico ``G. Galilei'', Belluno}{}{Votazione~86/100}
+
+% I primi tre argomenti di \cventry sono obbligatori; gli altri possono essere lasciati vuoti;
+% la sintassi del comando è:
+% \cventry{anno}{Titolo di studio}{Istituzione}{Città}{Altre informazioni}{Riga di descrizione 1 \\ Riga di descrizione 2}
+% ovvero
+% \cventry{anno--anno}{Tipo di lavoro}{Datore di lavoro}{Città}{Altre informazioni}{Riga di descrizione 1 \\ Riga di descrizione 2}
+
+
+
+%\renewcommand{\listitemsymbol}{-~}           % cambia il simbolo per gli item degli elenchi
+
+\section{Esperienze lavorative e di studio}
+\cventry{Giugno 2018}{Ninth ICTP Workshop on the Theory and Use of Regional Climate Models}{speaker e assistente di laboratorio}{Abdus Salam International Centre for Theoretical Physics (ICTP)}{Trieste}{}
+\cventry{Maggio 2018}{European Geosciences Union General Assembly}{poster}{}{Vienna}{}
+\cventry{Novembre 2017--Marzo 2019}{Rappresentante degli studenti di dottorato}{}{Dipartimento di Matematica e Geoscienze, Università di Trieste}{Trieste}{}
+\cventry{Luglio 2017}{10th HyMeX workshop}{speaker}{}{Barcellona}{}
+\cventry{Giugno 2017}{Fourth Workshop on Water Resources in Developing Countries: Hydroclimate Modeling and Analysis Tools}{speaker e assistente di laboratorio}{Abdus Salam International Centre for Theoretical Physics (ICTP)}{Trieste}{}
+\cventry{Aprile 2017}{European Geosciences Union General Assembly}{partecipante}{}{Vienna}{}
+\cventry{Maggio 2016}{Eight ICTP Workshop on the Theory and Use of Regional Climate Models}{speaker e assistente di laboratorio}{Abdus Salam International Centre for Theoretical Physics (ICTP)}{Trieste}{}
+\cventry{Maggio 2016}{ICRC-CORDEX 2016}{partecipante}{}{Stoccolma}{}
+\cventry{Aprile 2016}{European Geosciences Union General Assembly}{speaker}{}{Vienna}{}
+\cventry{Novembre 2015}{CLIVAR-ICTP Workshop on Decadal Climate Variability and Predictability}{partecipante}{Abdus Salam International Centre for Theoretical Physics (ICTP)}{Trieste}{}
+\cventry{Aprile--Ottobre 2015}{Borsa post-lauream}{}{Abdus Salam International Centre for Theoretical Physics (ICTP), sezione Earth System Physics}{Trieste}{}
+\cventry{Maggio 2015}{Third Workshop on Water Resources in Developing Countries: Planning and Management in Face of Hydroclimatological Extremes and Variability}{partecipante}{Abdus Salam International Centre for Theoretical Physics (ICTP)}{Trieste}{}
+\cventry{Maggio 2014}{Seventh ICTP Workshop on the Theory and Use of Regional Climate Models}{partecipante}{Abdus Salam International Centre for Theoretical Physics (ICTP)}{Trieste}{}
+\cventry{2012--2014}{Traduttore freelance inglese-italiano}{}{\url{http://www.notebookcheck.it/}}{}{}
+
+
+
+
+% Elenco delle pubblicazioni generato automaticamente con BibTeX
+
+\renewcommand{\refname}{Pubblicazioni}       % per avere 'Pubblicazioni' invece di 'Riferimenti bibliografici'
+
+\nocite{*}
+
+\bibliographystyle{plain_ita}                % stile plain in italiano;
+                                             % il file plain_ita (in dotazione con CV.zip) va nella cartella di lavoro
+
+\bibliography{Pubblicazioni}                 % 'Pubblicazioni' è il nome del database di BibTeX
+
+\section{Lingue conosciute}
+\cvdoubleitem{Italiano}{Madrelingua}{Inglese}{Ottimo}
+
+\section{Conoscenze informatiche}
+\subsection{Sistemi operativi}
+\cvcomputer{Unix/Linux}{Ottima}{Windows}{Buona}
+
+\subsection{Sistemi HPC}
+\cvcomputer{PBS (Argo)}{Ottima}{SLURM (Marconi)}{Ottima}
+
+\subsection{Linguaggi e software}
+\cvcomputer{R}{Ottima}{Bash/Fish}{Ottima}
+\cvcomputer{CDO}{Ottima}{GDAL}{Buona}
+\cvcomputer{\LaTeX}{Buona}{NCO}{Buona}
+\cvcomputer{Python}{Discreta}{Arduino}{Discreta}
+\cvcomputer{GDAL}{Discreta}{SVN/git}{Discreta}
+\cvcomputer{C}{Base}{ROOT}{Base}
+\cvcomputer{MATLAB}{Base}{Fortran}{Base}
+\cvcomputer{QGIS}{Base}{}{}
+
+\subsection{Modelli computazionali}
+\cvcomputer{Modello climatico regionale RegCM4}{Buona}{Modello idrologico CHyM}{Base}
+
+\subsection{Contributi software}
+\cventry{R package \href{https://github.com/r-spatial/stars/}{stars}}{spatiotemporal tidy arrays for R}{collaboratore}{}{}{}
+\cventry{ncEdit}{software per la modifica visuale di dati NetCDF grigliati}{autore}{versione beta per uso interno}{}{}
+\cventry{CHyMView}{software per l'analisi dei dati di output del modello idrologico CHyM}{autore}{versione alpha per uso personale}{}{}
+
+% \section{Allegati}
+% \cvitem{1}{Mettere qui allegati?}
+% \cvitem{2}{Esami sostenuti nel corso di laurea in Matematica}
+% \cvitem{3}{Sommario dell'\emph{Arte di scrivere con \LaTeX}}
+
+\section{Altri interessi}
+\cvitem{}{\begin{itemize}
+ \item Montagna, alpinismo ed arrampicata
+ \item Informatica e tecnologia
+ \item Meccanica ed elettronica
+\end{itemize}}
+
+
+% \clearpage
+%
+% \section{Allegato 1: Sommario della tesi di laurea in Matematica}
+% \cvitem{Titolo}{Le origini della teoria delle distribuzioni}
+% \cvitem{Relatore}{Prof.~Ermanno Lanconelli}
+% \cvitem{Data esame}{17 novembre 2000}
+% \subsection{Sommario}
+%
+% \cvitem{}{Il lavoro di tesi valuta le motivazioni che diedero origine alla teoria delle distribuzioni.}
+%
+% \cvitem{}{Obiettivo specifico del lavoro è mostrare come le ricerche dei matematici impegnati nel problema della fondazione del concetto di distribuzione non siano avvenute sulla spinta di una sempre maggiore generalizzazione dei risultati o a causa di astratte questioni di rigore: alla formulazione di nuovi standard di rigore si perviene quando i vecchi criteri non permettono una risposta adeguata alle domande che vengono dalla pratica matematica o addirittura da problemi in certo senso esterni alla matematica che, trattati matematicamente, impongono mutamenti del quadro teorico.}
+%
+% \cvitem{}{In questo modo, è possibile accorgersi della differenza che intercorre fra la matematica come sistema organicamente strutturato e come disciplina \emph{in fieri}: spesso gli obiettivi concettuali raggiunti in un dato momento storico non sono che un punto di partenza, e risulta evidente che molte lacune devono essere colmate o che le estensioni veramente importanti devono ancora essere realizzate.}
+%
+%
+%
+% \section{Allegato 2: Esami sostenuti nel Corso di laurea in Matematica}
+% \cvitem{}{%
+% \begin{tabular}{l@{\quad}l}
+% Algebra                           & 30/30 e lode \\
+% Calcolo Numerico e Programmazione & 30/30 e lode \\
+% Istituzioni di Analisi Superiore  & 30/30 e lode \\
+% Geometria II                      & 30/30 e lode \\
+% Critica dei Principi              & 30/30 e lode \\
+% Calcolo delle Probabilità         & 30/30 e lode \\
+% Analisi Superiore                 & 30/30 e lode \\
+% Matematiche Elementari            & 30/30 e lode \\
+% Geometria Superiore               & 30/30 e lode \\
+% \end{tabular}
+% }
+
+
+
+% \section{Allegato 3: Sommario dell'\emph{Arte di scrivere con \LaTeX}}
+% \cvitem{}{\LaTeX{} è un programma di composizione tipografica liberamente disponibile, indicato soprattutto nella preparazione di documenti scientifici ai più elevati livelli di qualità. Lo scopo del lavoro, rivolto sia a chi muove i primi passi in \LaTeX{} sia a quanti già lo conoscono, è di offrire ai suoi utenti italiani le conoscenze essenziali per poterlo usare con successo.}
+%
+% \cvitem{}{I concetti fondamentali della materia, raccolti da svariati manuali, vengono presentati nel modo più chiaro e organico possibile; nel contempo si fornisce un vasto campionario di esempi e si analizzano alcuni problemi tipici della stesura di una pubblicazione scientifica o professionale in italiano, indicando per ciascuno le soluzioni per noi migliori.}
+%
+%
+%
+% % Lettera di presentazione
+%
+% \clearpage
+%
+% \recipient{Prof.~Enrico Gregorio}%           % dati del destinatario
+%           {Università di Verona \\
+%            viale dei Giardini, 15 \\
+%            37134 Verona}
+%
+% %\date{21 settembre 2012}                    % data
+%
+% \opening{Egregio prof.~Gregorio,}            % apertura
+%
+% \closing{In fede,}                           % chiusura
+%
+% \renewcommand{\enclname}{Allegati}           % per avere 'Allegati' invece di 'Enclosure'
+%
+% \enclosure{curriculum vitae}                 % allegati
+%
+% \makelettertitle
+%
+% \lipsum[1-2]
+%
+% Albert Einstein ha scoperto che $E=mc^2$ nel 1905.
+%
+% \[
+% e^{i\pi}+1=0.
+% \]
+%
+% \makeletterclosing
+
+\end{document}
